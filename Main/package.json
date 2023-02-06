@@ -1,14 +1,15 @@
 {
   "name": "svg_logo_generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "A command line svg logo generator. Enter a maximum of 3 letters, choose a color and a shape, and svg logo generator generatesa styled svg type document for displaying yor logo",
   "main": "index.js",
   "directories": {
     "example": "examples",
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
