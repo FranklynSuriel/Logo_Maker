@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
-const fs = require('fs/promises');
-const {createDocument} = require('./document')
+const { join } = require('path');
+const { writeFile } = require('fs/promises');
+const { createDocument } = require('./document')
 
 class CLI {
     constructor() {
@@ -19,6 +20,12 @@ class CLI {
           .then(({ name }) => {
             this.title = `${name}'s Logo`;
             return this.addShape();
+          })
+          .then(() => {
+            return writeFile(
+                join(__dirname, '..', 'output', 'shape.html'),
+                createDocument(this.logoText, this.logoColor, this.shapeColor)
+              );
           })
           .catch((err) => {
             console.log(err);
@@ -69,11 +76,17 @@ class CLI {
                 },
             },
         ])
+
         .then((response) => {
             console.log(response)
+            responseHandler(response);
 
-        }
-        )
+        })
+
+        .then(() => console.log('Successfully created index.html!!'))
+
+        .catch((err) => console.log('An error has occurred, please try again!!'))
+
     }
 }
 
