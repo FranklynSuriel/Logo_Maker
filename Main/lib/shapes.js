@@ -10,6 +10,16 @@ class Shape {
     render() {
         throw new Error('Child class must implement a render() method.')
     }
+    // setLogoText() {
+    //     return `${this.logoText}`;
+    // }
+    // setLogoColor() {
+    //     return `${this.logoColor}`;
+    // }
+    // setShapeColor() {
+    //     return `${this.shapeColor}`;
+    // }
+    
 }
 
 module.exports = Shape; 

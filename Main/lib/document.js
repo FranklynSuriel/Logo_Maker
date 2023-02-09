@@ -1,44 +1,21 @@
-const Circle = require('./circle');
-const Square = require('./square');
-const Triangle = require('./triangle');
-let newShape;
+const Circle = require('./circle.js');
+const Square = require('./square.js');
+const Triangle = require('./triangle.js');
+
 function createDocument(response) {
-    if (response.shape === 'Circle') {
+  
+  let newShape;
+    if (response.logoShape === 'Circle') {
         let newShape = new Circle (response.logoText, response.logoColor, response.shapeColor)
-        return newShape
-    }
-
-    if (response.shape === 'Square') {
+        return newShape.render()
+    }else if (response.logoShape === 'Square') {
       let newShape = new Square (response.logoText, response.logoColor, response.shapeColor)
-        return newShape
-    }
-
-    if (response.shape === 'Triangle') {
+        return newShape.render()
+    }else if (response.logoShape === 'Triangle') {
       let newShape = new Triangle (response.logoText, response.logoColor, response.shapeColor)
-        return newShape
+        return newShape.render()
     }
 
-
-
-    return `<!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>SVG_Logo_Generator</title>
-      <link rel="stylesheet" href="../dist/style.css" />
-    </head>
-    <body>
-      <div class="card">
-        ${newShape}       
-      </div>
-    </body>
-  </html>
-  `;
 }
 
-
-
-
-module.exports = { createDocument }
+module.exports = createDocument
