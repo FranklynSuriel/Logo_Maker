@@ -10,8 +10,8 @@ class Triangle extends Shape {
     return `<svg version = "1.1" 
       width = "300" height="200" 
       xmlns = "http://www.w3.org/2000/svg">
-      <polygon points = "160, 10 210,160 105,10   fill = "${this.shapeColor}" />      
-      <text x = "150" y = "125" font-size = "60" text-anchor = "middle" fill = "${this.logoColor}">${this.logoText}</text>      
+      <polygon points = "10,160 210,160 105,10" fill = "${this.shapeColor}" />      
+      <text x = "105" y = "135" font-size = "60" text-anchor = "middle" fill = "${this.logoColor}">${this.logoText}</text>      
     </svg>`
   }
 }

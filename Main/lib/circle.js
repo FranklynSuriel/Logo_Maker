@@ -1,5 +1,4 @@
 const Shape = require('./shapes.js');
-// const CLI = require('./cli');
 
 class Circle extends Shape {
   constructor(logoText, logoColor, shapeColor) {
