@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 // const { join } = require('path');
 const fs = require('fs/promises');
-const { createDocument } = require('./document')
+const createDocument = require('./document.js')
 
 function run() {
     inquirer
@@ -53,7 +53,7 @@ function run() {
 
         })
 
-        .then(() => console.log('Successfully created index.html!!'))
+        .then(() => console.log('Successfully created logo.svg!!'))
 
         .catch((err) => console.log(err))
 
@@ -61,7 +61,7 @@ function run() {
 
 function responseHandler(response) {
     const logoSvg = createDocument(response);
-    fs.writeFile("./svg.html", logoSvg);
+    fs.writeFile("./logo.svg", logoSvg);
     
 }
 
