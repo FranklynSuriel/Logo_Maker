@@ -1,41 +1,10 @@
 const inquirer = require('inquirer');
-const { join } = require('path');
-const { writeFile } = require('fs/promises');
+// const { join } = require('path');
+const fs = require('fs/promises');
 const { createDocument } = require('./document')
 
-class CLI {
-    constructor() {
-        this.title = '';
-    }
-
-    run() {
-        return inquirer
-          .prompt([
-            {
-              type: 'input',
-              name: 'name',
-              message: 'Please enter your name or logo name:',
-            },
-          ])
-          .then(({ name }) => {
-            this.title = `${name}'s Logo`;
-            return this.addShape();
-          })
-          .then(() => {
-            return writeFile(
-                join(__dirname, '..', 'output', 'shape.html'),
-                createDocument(this.logoText, this.logoColor, this.shapeColor)
-              );
-          })
-          .catch((err) => {
-            console.log(err);
-            console.log('Something went wrong.')
-
-          })
-        }
-
-    addShape() {
-        return inquirer
+function run() {
+    inquirer
         .prompt([
             {
                 type: 'input',
@@ -43,7 +12,7 @@ class CLI {
                 message: 'Please enter a maximum of three (3) letters to be used in your logo',
                 validate(value) {
                     if (value.length > 3)
-                    console.log('Logo text can not be more than 3 letter, please try again');
+                        console.log('Logo text can not be more than 3 letter, please try again');
                     else return true;
                 },
             },
@@ -78,16 +47,24 @@ class CLI {
         ])
 
         .then((response) => {
-            console.log(response)
-            responseHandler(response);
+            responseHandler(response)
+            
+
 
         })
 
         .then(() => console.log('Successfully created index.html!!'))
 
-        .catch((err) => console.log('An error has occurred, please try again!!'))
+        .catch((err) => console.log(err))
 
-    }
 }
 
-module.exports = CLI;
+function responseHandler(response) {
+    const logoSvg = createDocument(response);
+    fs.writeFile("./svg.html", logoSvg);
+    
+}
+
+
+
+module.exports = run;

@@ -1,4 +1,4 @@
-const CLI = require('./cli');
+// const CLI = require('./cli');
 
 class Shape {
     constructor(logoText, logoColor, shapeColor) {
