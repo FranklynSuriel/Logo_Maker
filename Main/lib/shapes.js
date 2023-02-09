@@ -1,8 +1,8 @@
-
+// Create constructor class Blueprint to use with each shapes
 class Shape {
-    constructor(logoText, logoColor, shapeColor) {
+    constructor(logoText, textColor, shapeColor) {
         this.logoText = logoText;
-        this.logoColor = logoColor;
+        this.textColor = textColor;
         this.shapeColor = shapeColor;
     }
 
@@ -12,5 +12,5 @@ class Shape {
     
     
 }
-
+// Export module
 module.exports = Shape; 
