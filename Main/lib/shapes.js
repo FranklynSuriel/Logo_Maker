@@ -1,4 +1,3 @@
-// const CLI = require('./cli');
 
 class Shape {
     constructor(logoText, logoColor, shapeColor) {
@@ -10,15 +9,7 @@ class Shape {
     render() {
         throw new Error('Child class must implement a render() method.')
     }
-    // setLogoText() {
-    //     return `${this.logoText}`;
-    // }
-    // setLogoColor() {
-    //     return `${this.logoColor}`;
-    // }
-    // setShapeColor() {
-    //     return `${this.shapeColor}`;
-    // }
+    
     
 }
 

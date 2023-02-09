@@ -32,7 +32,7 @@ function run() {
                 choices: [
                     'Circle',
                     'Triangle',
-                    'square',
+                    'Square',
                 ],
             },
             {
@@ -61,7 +61,7 @@ function run() {
 
 function responseHandler(response) {
     const logoSvg = createDocument(response);
-    fs.writeFile("./logo.svg", logoSvg);
+    fs.writeFile("./output/logo.svg", logoSvg);
     
 }
 
