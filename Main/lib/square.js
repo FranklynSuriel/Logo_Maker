@@ -1,5 +1,5 @@
 const Shape = require('./shapes');
-const CLI = require('./cli');
+// const CLI = require('./cli');
 
 class Square extends Shape {
   constructor(logoText, logoColor, shapeColor) {
