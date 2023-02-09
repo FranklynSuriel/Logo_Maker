@@ -27,7 +27,10 @@ To use the svg logo generator, you you will have to use a terminal or git bash. 
 
 ## Credits
 
-
+* [Example SVG](https://static.fullstack-bootcamp.com/fullstack-ground/module-10/circle.svg)
+* [Scalable Vector Graphics (SVG)](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)
+* [SVG Tutorial](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial)
+* [Basic SVG Shapes](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)
 
 ## License
 
