@@ -17,17 +17,26 @@ A command line interface that allows an user create a svg logo base on the answe
 
 ## Installation
 
-No installation Needed. Open it in a terminal or git bash.
+This application requires: node.js and Inquirer npm.
 
 ## Usage
 
 To use the svg logo generator, you you will have to use a terminal or git bash. To start the application use **node index.js** and answer each of the questions. After finished all question a message with the status will appear and a logo.svg file will be created.
 
+[Walkthrough video link here!](https://drive.google.com/file/d/121cDeP6HehVxg0vQhU8e9pZ-65ai8Ryj/view?usp=sharing)
 
+The folowing picture shows the funstionality of the application
+
+![SVG logo program](./Main/dist/images/svgLogoGenerator.jpg)
+
+
+The following picture show an example
+
+![SVG logo](./Main/examples/circle.svg)
 
 ## Credits
 
-* [Example SVG](https://static.fullstack-bootcamp.com/fullstack-ground/module-10/circle.svg)
+
 * [Scalable Vector Graphics (SVG)](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)
 * [SVG Tutorial](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial)
 * [Basic SVG Shapes](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)
@@ -42,7 +51,7 @@ No contribubutions guidelines.
 
 ## Test
 
-No test avaible.
+Test available for shapes. On the command line interface run: npm run test
 
 ## Questions
 
