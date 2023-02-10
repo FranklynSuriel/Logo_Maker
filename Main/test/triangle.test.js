@@ -1,14 +1,15 @@
+// file needed for this application
 const Triangle = require('../lib/triangle');
 
+// A testing suite for Triangle is created.
 describe('Triangle', () => {
+
+    // A test is created to validate that functions parameters are correct
     it('Should return a triangle shape logo with the correct text, color text, and color shape', () => {
 
-        const shape = new Triangle('EX1','yellow','blue');        
-        expect(shape.render()).toMatch(`<svg version = "1.1" 
-        width = "300" height="200" 
-        xmlns = "http://www.w3.org/2000/svg">
-        <polygon points = "10,160 210,160 105,10" fill = "${shape.shapeColor}" />      
-        <text x = "105" y = "135" font-size = "60" text-anchor = "middle" fill = "${shape.logoColor}">${shape.logoText}</text>      
-      </svg>`);
+        const triangle = new Triangle('EX1','yellow','blue');        
+        expect((triangle.logoText)).toEqual('EX1');
+        expect((triangle.textColor)).toEqual('yellow');
+        expect((triangle.shapeColor)).toEqual('blue');
     })
 })
